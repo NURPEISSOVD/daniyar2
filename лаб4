@@ -1,1 +1,62 @@
+# TASK 1.1
 
+# Записываю строку в переменную
+user_input = input("Enter a string without whitespaces: ")
+# удаляю все пробелы
+user_input = user_input.replace(" ", "") 
+# конвертирование в картеж
+my_tuple = tuple(user_input)
+# вывожу в терминал
+print(f"TASK 1.1 - Created tuple is: {my_tuple}")
+
+
+# TASK 1.2
+# join обьеденяет по пустым строкам все элементы картежа
+print(f'TASK 1.2 - The string is: {"".join(my_tuple)}')
+
+
+# TASK 1.3
+tuple_A = (1, 2, 3, 4, 5, 6, 7)
+tuple_B = (5, 6, 7, 9, 7, 1, 10, 10)
+
+# len() дает длину строку. что бы получить половину мы разделяем на 2. 
+# int() дает нам целое число без запятой. просто если поделить на 2 то может получиться 0.5 и индекс не может быть float
+split_index_A = int(len(tuple_A)/2) 
+split_index_B = int(len(tuple_B)/2)
+
+# добавляю первые элементы до split_index_A с первого кортежа и элементы начиная с индекса split_index_B до конца
+result_tuple = tuple_A[:split_index_A] + tuple_B[split_index_B:]
+# вывожу в терминал
+print(f'TASK 1.3 - The new tuple is: {result_tuple}')
+
+
+# TASK 1.4
+input_tuple = (55, 6, 777, 54, 6, 76, 7777, 1, 777, 6)
+# input_tuple = ('55', '6', '777', 54, 6, 7777, 9, 777, 6)
+# input_tuple = ((1, 2, 3), ('A', 'B', 1), (1, 2, 3), ('A', 1))
+
+# создаем пустой словарь что бы в будущем туда кидать данные
+element_count = {}
+# пробегаемся по заданному кортежу
+for item in input_tuple:
+    # я беру эллемент кортежа как ключь и как значение пишу каунтер
+    # слово in это логический оператор в питоне который говорит есть ли данный элемент в картеже или нет
+    # если элемент есть то True
+    # если элемент нет то False
+    if item in element_count:
+        element_count[item] += 1
+    else:
+        element_count[item] = 1
+# в конце генерируем новый картеж
+element_occurrences = [(key, value) for key, value in element_count.items()]
+print(f"Elements and their occurrences: {element_occurrences}")
+
+
+# TASK 1.5
+data = (55, 6, 777, 70.0, '7', 'A')
+integers = tuple(item for item in data if isinstance(item, int))
+floats = tuple(item for item in data if isinstance(item, float))
+strings = tuple(item for item in data if isinstance(item, str))
+print(integers)
+print(floats)
+print(strings)
