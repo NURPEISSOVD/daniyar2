@@ -60,3 +60,60 @@ strings = tuple(item for item in data if isinstance(item, str))
 print(integers)
 print(floats)
 print(strings)
+# print("TASK 2.1")
+# s1 = 'TheBigBen'
+# print("Sample Output :")
+# print("Created set is:")
+# print({c for c in s1})
+# print("выражение {c for c in s1} для создания множества, содержащего все уникальные символы в строке s1.")
+# print("TASK 2.2")
+# set_A = {1,2,3,4,5}
+# set_B = {5,7,8,9,2,10}
+#
+# print("Sample Output 1:")
+# print(set_A.symmetric_difference(set_B))
+# print(" print() код выводит симметричную разницу set_A и set_B, которая представляет собой набор элементов, которые находятся либо в set_A, либо в set_B, но не в обоих.")
+# print("TASK 2.3")
+#
+# set_A = {1,2,3,4,5}
+# set_B = {5,7,8,9,2,10}
+#
+# print("Sample Output 1:")
+# print(set_A - set_B)
+# print("мы создаем множества set_A и set_B. Затем мы используем оператор -, чтобы вычислить разность между множествами set_A и set_B.")
+# print("TASK 2.4")
+# set_A = {1, 2, 3, 4, 7}
+# set_B = {8, 7, 9, 4, 2, 0, 10}
+# set_C = {4, 0, 1}
+#
+# for element in set_C:
+#     if element in set_A:
+#         set_A.remove(element)
+#         set_B.add(element)
+#
+# print("Updated set_C =", set_C)
+# print("три набора set_A, set_B и set_C. Затем мы используем цикл for для перебора каждого элемента в set_C. Если текущим элементом является inset_A, мы удаляем его из set_A и добавляем в set_B.  print() для отображения обновленного set_C")
+# print("TASK2.5")
+# import itertools
+#
+# A = {1,2,3,4,5,6}
+# n = 3
+# m = 5
+# result = [set(combo) for combo in itertools.combinations(A, n)][:m]
+# print("Sample Output 1:")
+# print(result)
+# print(" A и два целых числа n и m. Затем код использует функцию combinations() из модуля itertools для генерации всех возможных комбинаций из n элементов из A. Затем код выбирает первые m комбинаций из списка всех возможных комбинаций и сохраняет их в новом списке, называемом result.код выводит содержимое результата.")
+# # print("TASK 3.1")
+# from collections import defaultdict
+# cars_list = [('BMW', 'X6'), ('Toyota', 'Yaris'), ('Fiat', '500'), ('Fiat', 'Panda'), ('Toyota', 'Camry 30')]
+# print("Sample Input 1:")
+# print(cars_list)
+# groups = defaultdict(list)
+# for manufacturer, model in cars_list:
+#     groups[manufacturer].append(model)
+# print("Sample Output 1:")
+# for manufacturer, models in groups.items():
+#     print(f"{manufacturer} {len(models)}")
+#     for model in models:
+#         print(f"- {model}")
+# print("В первых двух строках мы импортируем класс defaultdict из модуля collections и создаем список cars_list. Затем мы используем цикл for, чтобы перебрать каждый элемент в списке cars_list. В каждой итерации цикла мы добавляем текущую модель автомобиля в список моделей для текущего производителя автомобиля в словаре groups.for, чтобы перебрать каждый элемент в словаре groups. В каждой итерации цикла мы выводим на экран количество моделей для текущего производителя автомобиля, а затем перебираем каждую модель автомобиля и выводим ее на экран.")
