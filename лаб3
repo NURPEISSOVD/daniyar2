@@ -9,7 +9,6 @@ while i <= N:
     if i % 2 == 0:
         print(i)
     i += 1
-
 print("TASK 2")
 N = int(input("Введите целое положительное число (N): "))
 
@@ -24,7 +23,6 @@ while i <= N:
 
 # Вывод результата
 print(f"Факториал числа {N} равен {fact}")
-
 print("TASK 3")
 while True:
     number = int(input("Введите число (или 0 для завершения): "))
@@ -50,7 +48,6 @@ for char in input_string:
 
 # Вывод результата
 print(f"Количество букв 'а' в строке: {count_a}")
-
 print("TASK 4")
 input_string = input("Введите строку: ")
 
@@ -64,7 +61,6 @@ for char in input_string:
 
 # Вывод результата
 print(f"Количество букв 'а' в строке: {count_a}")
-
 print("TASK 5")
 # Запрос ввода числа от пользователя
 number_str = input("Введите число: ")
@@ -79,7 +75,6 @@ for digit in number_str:
 
 # Вывод результата
 print(f"Сумма цифр в числе: {total}")
-
 print("TASK 6")
 N = int(input("Введите целое положительное число (N): "))
 
@@ -94,7 +89,6 @@ while count < N:
     print(a, end=" ")  # Вывод текущего числа Фибоначчи
     a, b = b, a + b  # Обновление переменных для следующего числа Фибоначчи
     count += 1
-
 print("TASK 7")
 input_string = input("Введите строку: ")
 
@@ -103,7 +97,6 @@ reversed_string = input_string[::-1]
 
 # Вывод результата
 print("Перевернутая строка:", reversed_string)
-
 print("TASK 8")
 # Инициализация переменной для хранения суммы нечетных чисел
 odd_sum = 0
@@ -120,7 +113,6 @@ while True:
     odd_sum += number  # Добавляем нечетные числа к сумме
 
 print(f"Сумма нечетных чисел: {odd_sum}")
-
 print("TASK 9")
 import random
 
@@ -141,7 +133,6 @@ while True:
     else:
         print(f"Поздравляем! Вы угадали число {secret_number} за {attempts} попыток.")
         break
-
 print("TASK 10")
 # Запрос ввода строки от пользователя
 input_string = input("Введите строку: ")
@@ -157,7 +148,6 @@ if input_string == reversed_string:
     print("Это палиндром.")
 else:
     print("Это не палиндром.")
-
 print("TASK 11")
 # Запрос ввода числа X и степени Y от пользователя
 X = float(input("Введите число X: "))
@@ -173,7 +163,6 @@ while Y > 0:
 
 # Вывод результата
 print(f"{X} в степени {Y} равно {result}")
-
 print("TASK 12")
 # Ввод от пользователя
 N = int(input("Введите целое положительное число (N): "))
@@ -198,7 +187,6 @@ while number <= N:
         print(number)
 
     number += 2  # Переходим к следующему нечетному числу
-
 print("TASK 13")
 # Запрос ввода числа от пользователя
 number = input("Введите число: ")
@@ -207,7 +195,6 @@ number = input("Введите число: ")
 reversed_number = number[::-1]
 
 print("Число в обратном порядке:", reversed_number)
-
 print("TASK 14")
 def is_prime(n):
     if n <= 1:
@@ -235,7 +222,6 @@ while True:
     else:
         print(f"{number} не является простым числом.")
         number += 1  # Переход к следующему числу
-
 print("TASK 15")
 # Функция для шифрования строки с помощью шифра Цезаря
 def caesar_cipher(text, shift):
