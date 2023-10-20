@@ -114,3 +114,18 @@ else:
                 print(f"The result of division is: {result}")
         else:
             print("Invalid choice. Please enter a valid operation number (1/2/3/4).")
+
+Task 1.1: This task prints the numbers 4, 8, 15, 16, 23, and 42 on the same line, separated by spaces. The f-string syntax is used to format the output. 
+# Task 1.2: This task prints the same numbers as Task 1.1, but on separate lines. The \n character is used to create a new line in the output. 
+# Task 1.3: This task asks the user to enter a number and then displays three consecutive numbers starting from that number. For example, if the user enters 5, the output will be 5, 6, and 7. The try-except block is used to handle any errors that might occur, such as invalid input or other exceptions. 
+# Task 1.4: This task asks the user to enter three integers and then displays their sum. The input function is used to get the user input and the int function is used to convert it to an integer. The + operator is used to add the numbers together. 
+# Task 1.5: This task asks the user to enter a valid integer and then displays the cube and the surface area of a cube with that side length. The ** operator is used to raise a number to a power and the * operator is used to multiply two numbers. 
+# Task 2.1: This task asks the user to enter two numbers: schol and integ. Then it displays the result of dividing integ by schol and the remainder of that division. The / operator is used for division and the % operator is used for modulo (remainder). 
+# Task 2.2: This task asks the user to enter a four-digit number and then displays each digit in its corresponding position (thousands, hundreds, tens, ones). For example, if the user enters 1234, the output will be: 
+# Цифра в позиции тысяч равна 1 Цифра в позиции сотен равна 2 Цифра в позиции десятков равна 3 Цифра в позиции единиц равна 4 
+ 
+# The // operator is used for integer division and the % operator is used for modulo (remainder). The if-else block is used to check if the number is between 1000 and 9999, otherwise it prints an error message. 
+ 
+# Task 2.3: This task asks the user to enter the population of the universe and then displays how many survivors there will be after Thanos snaps his fingers and destroys half of all life. If the population is even, then half of it will survive. If the population is odd, then Thanos will round up the number of survivors. For example, if the population is 7, then there will be 4 survivors. The if-else block is used to check if the population is even or odd using the % operator. 
+# Task 2.4: This task asks the user to enter a number and then displays the result of performing a left shift operation on that number. A left shift operation means moving all the bits in a binary representation of a number one position to the left and filling in a zero on the right. For example, if the number is 5, which is 101 in binary, then a left shift operation will result in 10, which is 1010 in binary. The << operator is used for left shift operation in Python. The if-else block is used to check if the result is zero, which means that all the bits in the original number were zeros or were shifted out of range. 
+# Task 2.5: This task asks the user to enter two numbers and then choose an operation from a menu (addition, subtraction, multiplication, or division). Then it displays the result of performing that operation on those numbers. For example, if the user enters 3 and 4 and chooses addition, then the output will be:
