@@ -1,1 +1,11 @@
+print("TASK 1")
+N = int(input("Enter a positive integer (N): "))
 
+# Initialize a counter
+i = 1
+
+# Use a while loop to print even numbers
+while i <= N:
+    if i % 2 == 0:
+        print(i)
+    i += 1
