@@ -1,0 +1,148 @@
+def calculate_tax(salary):
+    try:
+        salary = int(salary)
+        tax = salary * 0.2
+        return tax
+    except ValueError:
+        return None
+
+name = input("Введите свое имя, пожалуйста: ")
+
+while True:
+    salary_input = input("Введите желаемый уровень зарплаты: ")
+    
+    tax = calculate_tax(salary_input)
+
+    if tax is not None:
+        print(f"{name}, уровень налога, который ты заплатишь при зарплате {salary_input}, составит {tax}.")
+        break
+    else:
+        print(f"{name}, пожалуйста, введите желаемую зарплату цифрой.")
+
+        # Создаем словарь операций
+operations = {
+    1: lambda x, y: x + y,
+    2: lambda x, y: x * y,
+    3: lambda x, y: x / y,
+    4: lambda x, y: x ** y
+}
+
+# Выводим меню операций
+print("Select an operation:")
+print("1. Addition")
+print("2. Multiplication")
+print("3. Division")
+print("4. Exponentiation")
+
+# Получаем выбор пользователя
+choice = int(input("Enter the operation number (1/2/3/4): "))
+
+# Проверяем, что выбор допустим
+if choice in operations:
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    
+    # Выполняем выбранную операцию
+    result = operations[choice](num1, num2)
+    operation = "addition" if choice == 1 else "multiplication" if choice == 2 else "division" if choice == 3 else "exponentiation"
+    
+    print(f"Result of {operation} is: {result}")
+else:
+    print("Invalid choice. Please select a valid operation.")
+    
+    def generate_fibonacci_sequence(length):
+    fibonacci_sequence = [1, 1]
+
+    while len(fibonacci_sequence) < length:
+        next_number = fibonacci_sequence[-1] + fibonacci_sequence[-2]
+        fibonacci_sequence.append(next_number)
+
+    return fibonacci_sequence
+
+length = int(input("Пожалуйста, введите длину последовательности Фибоначчи: "))
+
+fib_sequence = generate_fibonacci_sequence(length)
+
+print(f"Последовательность Фибоначчи для числа {length}:")
+print(', '.join(map(str, fib_sequence)))
+
+def process_items(item_str):
+    items = [item.strip() for item in item_str.split(',')]
+    unique_items = set()
+    non_unique_items = []
+
+    for item in items:
+        if item not in unique_items:
+            unique_items.add(item)
+        else:
+            # Проверка, если это первое вхождение неуникального элемента
+            if item not in [x[0] for x in non_unique_items]:
+                non_unique_items.append((item, 2))
+            else:
+                for i, (item_tuple, count) in enumerate(non_unique_items):
+                    if item_tuple == item:
+                        non_unique_items[i] = (item, count + 1)
+
+    return unique_items, non_unique_items
+
+print("Пожалуйста, выберите задачу, которую хотите выполнить:")
+print("1. Введите элементы")
+print("2. Выход")
+
+choice = input()
+
+if choice == '1':
+    item_str = input("Пожалуйста, введите элементы через запятую: ")
+    unique_items, non_unique_items = process_items(item_str)
+
+    print("Элементы сохранены")
+    print("Уникальные предметы:", unique_items)
+    print("Не уникальные предметы:", tuple(non_unique_items))
+elif choice == '2':
+    print("Выход из программы.")
+else:
+    print("Неверный выбор. Пожалуйста, выберите допустимую задачу (1 или 2).")
+
+    # Инициализация пустого списка для задач и списка выполненных задач
+tasks = []
+completed_tasks = []
+
+while True:
+    print("Пожалуйста, выберите задачу, которую хотите выполнить:")
+    print("1. Добавить задачу")
+    print("2. Просмотр всех задач")
+    print("3. Отметить задачу как выполненную")
+    print("4. Просмотрите все выполненные задачи")
+    print("5. Выход")
+
+    choice = input()
+
+    if choice == '1':
+        task = input("Введите задачу: ")
+        tasks.append(task)
+        print(f'В список дел добавлено задание "{task}".')
+
+    elif choice == '2':
+        print("Все задачи:")
+        for index, task in enumerate(tasks, start=1):
+            print(f"{index}. {task}")
+
+    elif choice == '3':
+        task_to_mark = input("Введите название задачи: ")
+        if task_to_mark in tasks:
+            tasks.remove(task_to_mark)
+            completed_tasks.append(task_to_mark)
+            print(f'Задача "{task_to_mark}" помечена как выполненная.')
+        else:
+            print(f'Задача "{task_to_mark}" не найдена в списке дел.')
+
+    elif choice == '4':
+        print("Все выполненные задачи:")
+        for index, task in enumerate(completed_tasks, start=1):
+            print(f"{index}. {task}")
+
+    elif choice == '5':
+        break
+
+    else:
+        print("Неверный выбор. Пожалуйста, выберите допустимую задачу (1, 2, 3, 4 или 5).")
